@@ -1,0 +1,13 @@
+<form class="d-flex" method="POST" action="/products/search">
+  {{ search_form.hidden_tag() }}
+  <input
+    class="form-control form-control-sm bg-transparent text-white"
+    name="title"
+    type="text"
+    minlength="3"
+    maxlength="128"
+    placeholder="Search title..."
+  />
+  <div class="mx-1"></div>
+  <button class="btn btn-sm bg-purple text-white" type="submit">Search</button>
+</form>

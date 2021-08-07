@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block meta %}
+  <title>GOGAPI | {{ product.title }}</title>
+{% endblock %}
+
+{% block body %}
+<main>
+  <header class="product__cover">
+    <img class="product__cover__image" src="{{ product.image }}.jpg">
+  </header>
+  <div class="container mt-3">
+    <h1><strong>{{ product.title }}</strong></h1>
+  </div>
+</main>
+{% endblock%}

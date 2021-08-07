@@ -1,0 +1,29 @@
+<table class="table table-hover align-middle">
+  <tbody>
+    {% for product in products %}
+      <tr role="button" onclick="redirect('https://gog.com{{ product.url }}')">
+        <td>
+          <img src="{{ product.image }}_product_tile_116.jpg">
+        </td>
+        <td class="w-100">
+          {{ product.title }}
+        </td>
+        <td>
+          <div class="d-flex">
+            {% if product.rating >= 1 %}
+              {% if product.rating >= 45 %}
+                <span>{{ 5 * '★' }}</span>
+              {% else %}
+                <span>{{ product.rating // 10 * '★' }}</span>
+                <span>{{ (5 - (product.rating // 10)) * '☆' }}</span>
+              {% endif %}
+            {% endif %}
+          </div>
+        </td>
+        <td class="text-right">
+          {% include "_product_price.html" %}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

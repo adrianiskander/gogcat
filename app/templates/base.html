@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% block meta %}
+    <title>GOGCAT - Unofficial browser for GOG games catalog</title>
+  {% endblock %}
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+  {% include "_navbar.html" %}
+  {% block body %}{% endblock %}
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+:root {
+  --color-purple: #78387b;
+}
+
+body {
+  background-color: #eee;
+}
+
+.bg-purple {
+  background-color: var(--color-purple);
+}
+
+.navbar {
+  background-color: rgba(17,17,17,0.95);
+  min-height: 50px;
+  max-width: 100%;
+}
+
+.navbar .nav-link {
+  color: #eee !important;
+}
+
+.navbar .nav-link:hover {
+  color: white !important;
+}
+
+.pagination .active .page-link {
+  background-color: var(--color-purple);
+  border: none;
+}
+
+.product__cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .product__cover {
+    height: 480px;
+  }
+}
+
+@media (min-width: 992px) {
+  .product__cover {
+    height: 640px;
+  }
+}
+
+.product__cover__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover
+}
+
+.table-hover > tbody > tr:hover {
+  --bs-table-accent-bg: white;
+}
+
+.text-purple {
+  color: var(--color-purple);
+}
+
+.text-right {
+  text-align: right;
+}

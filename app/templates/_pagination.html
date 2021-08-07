@@ -1,0 +1,69 @@
+<nav aria-label="Products list navigation">
+  <ul class="pagination pagination-sm">
+    <li class="page-item">
+      {% if current_page > 1 %}
+        <li class="page-item">
+          <a
+            class="page-link"
+            href="/products?sort={{ request.args.get('sort') }}&page={{ current_page - 1 }}"
+            aria-label="Previous page">
+              <span aria-hidden="true">❮</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a
+            class="page-link"
+            href="/products?sort={{ request.args.get('sort') }}&page=1"
+            aria-label="First page">
+              <span aria-hidden="true">1</span>
+          </a>
+        </li>
+      {% endif %}
+    </li>
+
+    {% if current_page > 2 %}
+      <li class="page-item">
+          <a
+            class="page-link"
+            href="/products?sort={{ request.args.get('sort') }}&page={{ current_page - 1 }}"
+            aria-label="Previous page">
+              <span aria-hidden="true">{{ current_page - 1 }}</span>
+          </a>
+      </li>
+    {% endif %}
+
+    <li class="page-item active">
+      <a class="page-link">{{ current_page }}</a>
+    </li>
+
+    {% if current_page < total_pages - 1 %}
+      <li class="page-item">
+          <a
+            class="page-link"
+            href="/products?sort={{ request.args.get('sort') }}&page={{ current_page + 1 }}"
+            aria-label="Previous page">
+              <span aria-hidden="true">{{ current_page + 1 }}</span>
+          </a>
+      </li>
+    {% endif %}
+
+    {% if current_page < total_pages %}
+      <li class="page-item">
+        <a
+          class="page-link"
+          href="/products?sort={{ request.args.get('sort') }}&page={{ total_pages }}"
+          aria-label="Last page">
+            <span aria-hidden="true">{{ total_pages }}</span>
+        </a>
+      </li>
+      <li class="page-item">
+        <a
+          class="page-link"
+          href="/products?sort={{ request.args.get('sort') }}&page={{ current_page + 1 }}"
+          aria-label="Next page">
+            <span aria-hidden="true">❯</span>
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>
