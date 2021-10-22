@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+<nav class="navbar navbar-dark fixed-top">
   <div class="container-fluid">
     <div class="d-flex align-items-center justify-content-between">
       <a class="navbar-brand mx-0 p-0" href="/">
@@ -6,8 +6,18 @@
           GOG<br />CAT
         </span>
       </a>
-      <a class="nav-link py-0" href="/products">Products</a>
+      <a class="nav-link p-0 ps-2 d-none d-sm-block" href="/products">Products</a>
     </div>
-    {% include "_product_search_form.html" %}
+    <div class="d-flex align-items-center">
+      {% include "_product_search_form.html" %}
+      <div class="dropdown ms-2 d-sm-none">
+        <button class="btn btn-sm btn-outline-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-list"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="/products">Browse Products</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </nav>

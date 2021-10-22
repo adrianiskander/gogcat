@@ -1,9 +1,9 @@
-<form class="d-flex flex-align-center" method="GET" action="/products">
+<form class="d-flex align-items-center justify-content-end w-100" method="GET" action="/products">
   <label class="d-flex align-items-center" for="sort">Sort by:</label>
   {% if request.args.get('search') %}
     <input type="hidden" name="search" value="{{ request.args.get('search') }}" />
   {% endif %}
-  <select class="mx-3" name="sort">
+  <select class="mx-2" name="sort">
     {% for param in sort_params %}
       {% if param == request.args.get('sort') %}
         <option value="{{ param }}" selected>{{ param|title }}</option>

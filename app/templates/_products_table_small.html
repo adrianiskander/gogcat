@@ -1,10 +1,10 @@
 {% for product in products %}
-  <div class="row border-bottom" onclick="redirect('https://gog.com{{ product.url }}')">
+  <div class="row border-bottom g-0" onclick="redirect('https://gog.com{{ product.url }}')">
     <div class="col-5 d-flex align-items-center">
       <img class="w-100" src="{{ product.image }}_product_tile_116.jpg" />
     </div>
-    <div class="col-7 small d-flex flex-column">
-      <header class="h-100">{{ product.title }}</header>
+    <div class="col-7 d-flex flex-column ps-2 py-1">
+      <header class="h-100 small">{{ product.title }}</header>
       <div class="d-flex align-self-end justify-content-end">
         {% include "_product_price.html" %}
       </div>
