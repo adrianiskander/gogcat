@@ -6,20 +6,20 @@
   <img
     src="https://adrianiskander.com/images/gogcat_web_products.jpg"
     alt="GOGCAT | GOG.com games catalog browser"
-    style="width: 99.4%;"
+    style="width: 98%;"
   />  
 </a>
 
 
 <p style="margin: 0px;">
   <a href="https://gogcat.adrianiskander.com" title="GOGCAT | Front Page">
-    <img src="https://adrianiskander.com/images/gogcat_mobile_front.jpg" alt="GOGCAT | GOG.com games catalog browser" style="width: 33%;" />
+    <img src="https://adrianiskander.com/images/gogcat_mobile_front.jpg" alt="GOGCAT | GOG.com games catalog browser" style="width: 32%;" />
   </a>
   <a href="https://gogcat.adrianiskander.com/products?sort=discount&page=1" title="GOGCAT | Products Page">
-    <img src="https://adrianiskander.com/images/gogcat_mobile_products.jpg" alt="GOGCAT | GOG.com games catalog browser" style="width: 33%;" />
+    <img src="https://adrianiskander.com/images/gogcat_mobile_products.jpg" alt="GOGCAT | GOG.com games catalog browser" style="width: 32%;" />
   </a>
   <a href="https://gogcat.adrianiskander.com/products?search=witcher&sort=rating&page=1" title="GOGCAT | Search Results Page">
-    <img src="https://adrianiskander.com/images/gogcat_mobile_search.jpg" alt="GOGCAT | GOG.com games catalog browser" style="width: 33%;" />
+    <img src="https://adrianiskander.com/images/gogcat_mobile_search.jpg" alt="GOGCAT | GOG.com games catalog browser" style="width: 32%;" />
   </a>
 </p>
 
