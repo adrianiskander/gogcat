@@ -6,7 +6,7 @@
   <img
     src="https://adrianiskander.com/images/gogcat_web_products.jpg"
     alt="GOGCAT | GOG.com games catalog browser"
-    style="width: 98%;"
+    style="width: 97%;"
   />  
 </a>
 
