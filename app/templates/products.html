@@ -1,42 +1,46 @@
 {% extends "base.html" %}
 
 {% block body %}
-<main class="container mb-5 mt-5 pt-5">
+<main class="container-fluid d-flex justify-content-center mb-5 mt-5 pt-3 pt-md-5">
 
-  <header>
-    <h3 class="fw-bold">
-      Found
+  <div class="col-12 col-lg-10 col-xl-8 col-xxl-6">
+    <header>
+      <h3 class="fw-bold">
+        Found
+        {% if request.args.get('search') %}
+          {{ total_products }} products containing <em class="text-purple">{{ request.args.get('search') }}</em>
+        {% else %}
+          {{ total_products }} products in database
+        {% endif %}
+      </h3>
+    </header>
+
+    <div class="row align-items-center mb-3">
+      <div class="col-12 col-md-6">
+        <span>Updated: {{ last_update }}</span>
+      </div>
+      <div class="col-12 col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
+        {% include "_products_table_sort_form.html" %}
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="d-sm-none">
+      {% include "_products_table_small.html" %}
+    </div>
+    <div class="d-none d-sm-block">
+      {% include "_products_table.html" %}
+    </div>
+
+    <div class="d-flex justify-content-center mt-3">
       {% if request.args.get('search') %}
-        {{ total_products }} products containing <em class="text-purple">{{ request.args.get('search') }}</em>
+        {% include "_pagination_search_results.html" %}
       {% else %}
-        {{ total_products }} products in database
+        {% include "_pagination.html" %}
       {% endif %}
-    </h3>
-  </header>
-
-  <div class="row align-items-center my-3">
-    <div class="col-12 col-md-6">
-      <span>Updated: {{ last_update }}</span>
-    </div>
-    <div class="col-12 col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
-      {% include "_products_table_sort_form.html" %}
-    </div>
-  </div>
-  <hr />
-
-  <div class="d-sm-none">
-    {% include "_products_table_small.html" %}
-  </div>
-  <div class="d-none d-sm-flex">
-    {% include "_products_table.html" %}
+    </div>    
   </div>
 
-  <div class="d-flex justify-content-center mt-3">
-    {% if request.args.get('search') %}
-      {% include "_pagination_search_results.html" %}
-    {% else %}
-      {% include "_pagination.html" %}
-    {% endif %}
-  </div>
 </main>
 {% endblock %}
